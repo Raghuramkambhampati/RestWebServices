@@ -90,4 +90,20 @@ public class LoginAppDAO
 	 		}catch(Exception e){ System.out.println(e);}
 	 		return emplist;
 	 }
+	
+	
+	public boolean deletedata(Integer id)
+	{
+		
+		String query= new String("DELETE FROM emp WHERE id=?");
+		 ResultSet rs;
+		try 
+ 		{
+			PreparedStatement sql=con.prepareStatement(query);
+			sql.setInt(1, id);
+			if(sql.execute())
+		     return true;
+ 		}catch(Exception e){ System.out.println(e);}
+		return false;
+	}
 }

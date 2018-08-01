@@ -36,8 +36,21 @@ public class Employeecontroller {
 	return "Data Inserted sucessfully";
 	 }
 	
+	 @RequestMapping(value="/deleteuser",method = RequestMethod.POST)
+	 public String delete(
+			 @RequestParam(value = "id", required = true) Integer id
+			 )
+	 {
+		 LoginAppDAO Dao=LoginAppDAO.getInstance();
+			boolean b=Dao.CreateConnection();
+			b=Dao.deletedata(id);
+			if(b)
+		    	return "Deleted User Sucessfully";
+	      return "Deleted";
+	 }
 	 
-	 @RequestMapping(value="/validate",method = RequestMethod.POST)
+	 
+	 @RequestMapping(value="/validateuser",method = RequestMethod.POST)
 	 public String validation(
 			 @RequestParam(value = "name", required = true) String name,
 			 @RequestParam(value = "password", required = true) String password
