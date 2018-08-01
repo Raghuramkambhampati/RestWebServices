@@ -23,8 +23,8 @@ public class LoginAppDAO
 	{
 		try{ 
 			Class.forName("com.mysql.jdbc.Driver");  
-			 con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/test","root","root1234"); 
-			// con=DriverManager.getConnection( "jdbc:mysql://aa1b9lbrrjddtlp.csrs2ndmz3ve.us-east-2.rds.amazonaws.com:3306/ebdb?user=root&password=root12345");
+			 //con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/test","root","root1234"); 
+			 con=DriverManager.getConnection( "jdbc:mysql://aa1b9lbrrjddtlp.csrs2ndmz3ve.us-east-2.rds.amazonaws.com:3306/ebdb?user=root&password=root12345");
 		}catch(Exception e){
 			System.out.println(e);
 		    return false;	

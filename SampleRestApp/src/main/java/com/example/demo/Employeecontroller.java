@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Employeecontroller {
 	
 	
-	 @RequestMapping(value="/Insert",method = RequestMethod.POST)
+	 @RequestMapping(value="/Insert",method = RequestMethod.GET)
 	 public String Insertdetails(
 			 @RequestParam(value = "id", required = true) Integer id,
 			 @RequestParam(value = "name", required = true) String name,
@@ -36,7 +36,7 @@ public class Employeecontroller {
 	return "Data Inserted sucessfully";
 	 }
 	
-	 @RequestMapping(value="/deleteuser",method = RequestMethod.POST)
+	 @RequestMapping(value="/deleteuser",method = RequestMethod.GET)
 	 public String delete(
 			 @RequestParam(value = "id", required = true) Integer id
 			 )
@@ -50,7 +50,7 @@ public class Employeecontroller {
 	 }
 	 
 	 
-	 @RequestMapping(value="/validateuser",method = RequestMethod.POST)
+	 @RequestMapping(value="/validateuser",method = RequestMethod.GET)
 	 public String validation(
 			 @RequestParam(value = "name", required = true) String name,
 			 @RequestParam(value = "password", required = true) String password
@@ -64,7 +64,7 @@ public class Employeecontroller {
 	      return "Invalid User";	 
 	 }
 	 
-	 @RequestMapping(value="/getAllDetails",method = RequestMethod.POST)
+	 @RequestMapping(value="/getAllDetails",method = RequestMethod.GET)
 	 public ArrayList<Employee> Employeedetails()
 	 {
 	Employee tmpemp=new Employee();
