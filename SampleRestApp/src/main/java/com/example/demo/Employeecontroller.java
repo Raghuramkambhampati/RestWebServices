@@ -67,7 +67,6 @@ public class Employeecontroller {
 	 @RequestMapping(value="/getAllDetails",method = RequestMethod.GET)
 	 public ArrayList<Employee> Employeedetails()
 	 {
-	Employee tmpemp=new Employee();
 	LoginAppDAO Dao=LoginAppDAO.getInstance();
 	boolean b=Dao.CreateConnection();
 	ArrayList<Employee> emplist=Dao.retrivedata(); 
